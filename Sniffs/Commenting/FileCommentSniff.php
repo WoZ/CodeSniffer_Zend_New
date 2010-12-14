@@ -135,6 +135,34 @@ class ZendNew_Sniffs_Commenting_FileCommentSniff extends PEAR_Sniffs_Commenting_
 
     }//end processVersion()
 
+    /**
+     * Process the copyright tags.
+     *
+     * @param int $commentStart The position in the stack where
+     *                          the comment started.
+     *
+     * @return void
+     */
+    protected function processCopyrights($commentStart)
+    {
+        $copyrights = $this->commentParser->getCopyrights();
+
+        foreach ($copyrights as $copyright) {
+
+            $errorPos = ($commentStart + $copyright->getLine());
+
+            $content = $copyright->getContent();
+
+            if (empty($content)) {
+
+                $this->currentFile->addError('A copyright-tag must have content', $errorPos, 'CopyrightNoContent');
+
+            }
+
+        }
+
+    }
+
 }//end class
 
 ?>
