@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<ruleset name="Zend_New">
+ <description>The new Zend framework coding standard 
+	(according to http://framework.zend.com/manual/en/coding-standard.html).</description>
+
+ <!-- This is basically the PEAR standard with customizations... -->
+ <rule ref="PEAR"> 
+ </rule>
+
+ <!-- ZF coding standard doesn't say anything 
+      about version tags other than that they have to exist. -->
+
+ <rule ref="PEAR.Commenting.FileComment.InvalidVersion">
+  <severity>0</severity>
+ </rule>
+
+ <!-- ZF coding standard doesn't care about the php-version -->
+
+ <rule ref="PEAR.Commenting.FileComment.MissingVersion">
+  <severity>0</severity>
+ </rule>
+
+ <!-- Include some additional sniffs from the Generic standard -->
+ <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+ <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+ <rule ref="Generic.PHP.LowerCaseConstant"/>
+ <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+ <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+
+ <!-- Lines can be 85 chars long, but never show errors -->
+ <rule ref="Generic.Files.LineLength">
+  <properties>
+   <property name="lineLimit" value="80"/>
+   <property name="absoluteLineLimit" value="120"/>
+  </properties>
+ </rule>
+
+ <!-- Use Unix newlines -->
+ <rule ref="Generic.Files.LineEndings">
+  <properties>
+   <property name="eolChar" value="\n"/>
+  </properties>
+ </rule>
+
+ <!-- This messgae is not required as spaces are allowed for alignment -->
+ <rule ref="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma">
+  <severity>0</severity>
+ </rule>
+
+ <!-- Use warnings for inline control structures -->
+ <rule ref="Generic.ControlStructures.InlineControlStructure">
+  <properties>
+   <property name="error" value="false"/>
+  </properties>
+ </rule>
+
+</ruleset>
