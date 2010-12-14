@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
-<ruleset name="Zend_New">
+<ruleset name="ZendNew">
  <description>The new Zend framework coding standard 
 	(according to http://framework.zend.com/manual/en/coding-standard.html).</description>
 
  <!-- This is basically the PEAR standard with customizations... -->
  <rule ref="PEAR"> 
+         <exclude name="PEAR.Commenting.FileComment" />
  </rule>
 
  <!-- ZF coding standard doesn't say anything 
@@ -16,7 +17,7 @@
 
  <!-- ZF coding standard doesn't care about the php-version -->
 
- <rule ref="PEAR.Commenting.FileComment.MissingVersion">
+ <rule ref="ZendNew.Commenting.FileComment.MissingVersion">
   <severity>0</severity>
  </rule>
 
