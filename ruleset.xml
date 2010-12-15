@@ -6,12 +6,30 @@
  <!-- This is basically the PEAR standard with customizations... -->
  <rule ref="PEAR"> 
          <exclude name="PEAR.Commenting.FileComment" />
+         <exclude name="PEAR.Commenting.ClassComment" />
+         <exclude name="PEAR.NamingConventions.ValidVariableName" />
+         <exclude name="PEAR.NamingConventions.ValidFunctionName" />
+         <exclude name="PEAR.WhiteSpace.ScopeIndent" />
  </rule>
 
  <!-- ZF coding standard doesn't say anything 
       about version tags other than that they have to exist. -->
 
  <rule ref="PEAR.Commenting.FileComment.InvalidVersion">
+  <severity>0</severity>
+ </rule>
+
+ <!-- ZF coding standard doesn't care where the equal-sign is on
+      multiple assignments -->
+
+ <rule ref="PEAR.Formatting.MultiLineAssignment.EqualSignLine">
+  <severity>0</severity>
+ </rule>
+
+ <!-- ZF coding standard doesn't say, that the closing bracket has to
+      be on a new line -->
+
+ <rule ref="PEAR.ControlStructures.MultiLineCondition.CloseBracketNewLine">
   <severity>0</severity>
  </rule>
 
@@ -27,6 +45,25 @@
  <rule ref="Generic.PHP.LowerCaseConstant"/>
  <rule ref="Generic.PHP.DisallowShortOpenTag"/>
  <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+ <rule ref="Generic.WhiteSpace.ScopeIndent"/>
+
+ <!-- Include some additional sniffs from the Squiz standard -->
+ <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+
+ <!-- TEMPORARILY DISABLE CAMELCAPS SNIFF! -->
+
+ <rule ref="ZendNew.NamingConventions.ValidVariableName.NotCamelCaps">
+  <severity>0</severity>
+ </rule>
+
+ <rule ref="ZendNew.NamingConventions.ValidVariableName.StringNotCamelCaps">
+  <severity>0</severity>
+ </rule>
+
+ <rule ref="ZendNew.NamingConventions.ValidVariableName.MemberNotCamelCaps">
+  <severity>0</severity>
+ </rule>
+
 
  <!-- Lines can be 85 chars long, but never show errors -->
  <rule ref="Generic.Files.LineLength">
