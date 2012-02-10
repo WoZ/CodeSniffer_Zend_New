@@ -10,6 +10,7 @@
          <exclude name="PEAR.NamingConventions.ValidVariableName" />
          <exclude name="PEAR.NamingConventions.ValidFunctionName" />
          <exclude name="PEAR.WhiteSpace.ScopeIndent" />
+         <exclude name="PEAR.Files.IncludingFile" />
  </rule>
 
  <!-- ZF coding standard doesn't say anything 
