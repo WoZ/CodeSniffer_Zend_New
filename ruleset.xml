@@ -14,13 +14,6 @@
          <exclude name="PEAR.Files.IncludingFile" />
  </rule>
 
- <!-- ZF coding standard doesn't say anything 
-      about version tags other than that they have to exist. -->
-
- <rule ref="PEAR.Commenting.FileComment.InvalidVersion">
-  <severity>0</severity>
- </rule>
-
  <!-- ZF coding standard doesn't care where the equal-sign is on
       multiple assignments -->
 
@@ -32,12 +25,6 @@
       be on a new line -->
 
  <rule ref="PEAR.ControlStructures.MultiLineCondition.CloseBracketNewLine">
-  <severity>0</severity>
- </rule>
-
- <!-- ZF coding standard doesn't care about the php-version -->
-
- <rule ref="ZendNew.Commenting.FileComment.MissingVersion">
   <severity>0</severity>
  </rule>
 
