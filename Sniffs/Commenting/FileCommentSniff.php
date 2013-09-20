@@ -58,7 +58,7 @@ class ZendNew_Sniffs_Commenting_FileCommentSniff extends PEAR_Sniffs_Commenting_
      */
     protected $tags = array(
                        'category'   => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => false,
                                         'order_text'     => 'precedes @package',
                                        ),
@@ -68,32 +68,32 @@ class ZendNew_Sniffs_Commenting_FileCommentSniff extends PEAR_Sniffs_Commenting_
                                         'order_text'     => 'follows @category',
                                        ),
                        'subpackage' => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => false,
                                         'order_text'     => 'follows @package',
                                        ),
                        'author'     => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => true,
                                         'order_text'     => 'follows @subpackage (if used) or @package',
                                        ),
                        'copyright'  => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => true,
                                         'order_text'     => 'follows @author',
                                        ),
                        'license'    => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => false,
                                         'order_text'     => 'follows @copyright (if used) or @author',
                                        ),
                        'version'    => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => false,
                                         'order_text'     => 'follows @license',
                                        ),
                        'link'       => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => true,
                                         'order_text'     => 'follows @version',
                                        ),
@@ -103,7 +103,7 @@ class ZendNew_Sniffs_Commenting_FileCommentSniff extends PEAR_Sniffs_Commenting_
                                         'order_text'     => 'follows @link',
                                        ),
                        'since'      => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => false,
                                         'order_text'     => 'follows @see (if used) or @link',
                                        ),
